@@ -26,3 +26,7 @@ training_metrics_detailed.png
 !data/**/*.gif
 !data/**/*.png
 !data/**
+
+!certificate/
+!certificate/**/*.png
+!certificate/**/*
