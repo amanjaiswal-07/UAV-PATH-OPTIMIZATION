@@ -7,7 +7,6 @@
 [![OpenAI Gym](https://img.shields.io/badge/OpenAI-Gym-412991?style=for-the-badge)]()
 [![IEEE](https://img.shields.io/badge/IEEE-NCC%202026-blue?style=for-the-badge)]()
 [![Reinforcement Learning](https://img.shields.io/badge/Reinforcement-Learning-success?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)]()
 
 </div>
 
@@ -31,21 +30,50 @@ The research was **accepted and presented at IEEE National Conference on Communi
 
 ---
 
-## 🎥 Project Preview
+## 📄 Research Publication
+
+<div align="center">
+
+**Published at IEEE National Conference on Communications (NCC 2026), IIT Hyderabad**
+
+📖 **Paper:** [ieeexplore.ieee.org/document/11479152](https://ieeexplore.ieee.org/document/11479152)
+
+📜 **Presentation Certificate:**
 
 <p align="center">
-
-<img src="data/system_model.gif" width="850">
-
+<img src="certificate/certificate.png" width="850">
 </p>
 
-<p align="center">
-<b>Custom 3D UAV Simulation Environment used for Reinforcement Learning</b>
-</p>
+⭐ If you find this work useful, please consider giving the repository a star.
+
+</div>
 
 ---
 
-# ✨ Highlights
+## 🎥 Project Preview
+
+<p align="center">
+<img src="data/system_model.gif" width="900">
+</p>
+<p align="center"><b>System Model</b></p>
+
+---
+
+<p align="center">
+<img src="data/UAV2D view.gif" width="900">
+</p>
+<p align="center"><b>2D UAV Navigation</b></p>
+
+---
+
+<p align="center">
+<img src="data/UAV3D view.gif" width="900">
+</p>
+<p align="center"><b>3D UAV Navigation</b></p>
+
+---
+
+## ✨ Highlights
 
 - 🎓 Published at **IEEE NCC 2026**
 - 🤖 Built a custom **OpenAI Gym-compatible UAV Environment**
@@ -60,23 +88,35 @@ The research was **accepted and presented at IEEE National Conference on Communi
 
 ---
 
-# 📖 Table of Contents
+## 📖 Table of Contents
 
 - [Project Motivation](#-project-motivation)
-- [System Architecture](#-system-architecture)
-- [Machine Learning Pipeline](#-machine-learning-pipeline)
+- [System Architecture](#️-system-architecture)
+- [Machine Learning Pipeline](#️-machine-learning-pipeline)
+- [Core Components](#-core-components)
 - [Key Features](#-key-features)
+- [Environment Design](#-environment-design)
+- [State Representation](#-state-representation)
+- [Action Space](#-action-space)
+- [Reward Function](#-reward-function)
+- [Experimental Setup](#-experimental-setup)
 - [Repository Structure](#-repository-structure)
 - [Experimental Results](#-experimental-results)
-- [Performance Comparison](#-performance-comparison)
-- [Installation](#-installation)
+- [Performance Comparison](#-quantitative-performance-comparison)
+- [Ablation Study](#-ablation-study)
+- [Key Experimental Insights](#-key-experimental-insights)
+- [Installation](#️-installation)
 - [Usage](#-usage)
+- [Demonstration / Navigation Visualization](#-demonstration--navigation-visualization)
 - [Publication](#-publication)
+- [Citation](#-citation)
 - [Skills Demonstrated](#-skills-demonstrated)
 - [Future Work](#-future-work)
 - [Author](#-author)
 
-# 🎯 Project Motivation
+---
+
+## 🎯 Project Motivation
 
 The rapid evolution of **6G** and **Non-Terrestrial Networks (NTNs)** is transforming the way communication systems provide global connectivity. In these next-generation networks, **Unmanned Aerial Vehicles (UAVs)** serve as intelligent aerial relays, extending wireless coverage to remote, disaster-stricken, and infrastructure-deficient regions.
 
@@ -96,7 +136,7 @@ The proposed framework was validated through a peer-reviewed publication at **IE
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
 The project follows a modular machine learning pipeline where each component is responsible for a specific stage of the autonomous navigation process.
 
@@ -133,11 +173,11 @@ The project follows a modular machine learning pipeline where each component is 
 
 ---
 
-# ⚙️ Machine Learning Pipeline
+## ⚙️ Machine Learning Pipeline
 
 The framework consists of five major stages.
 
-## 1️⃣ Synthetic Environment Generation
+### 1️⃣ Synthetic Environment Generation
 
 Since real-world UAV communication datasets are extremely limited, a synthetic simulation environment was developed.
 
@@ -151,9 +191,7 @@ The environment procedurally generates:
 
 These components together emulate realistic **Non-Terrestrial Network (NTN)** scenarios for reinforcement learning.
 
----
-
-## 2️⃣ Environment Simulation
+### 2️⃣ Environment Simulation
 
 A custom **OpenAI Gym-compatible environment** models the UAV's interaction with the world.
 
@@ -176,9 +214,7 @@ next_state, reward, done, info = env.step(action)
 
 This modular design allows the environment to be reused with different reinforcement learning algorithms.
 
----
-
-## 3️⃣ Deep Reinforcement Learning
+### 3️⃣ Deep Reinforcement Learning
 
 The UAV learns an optimal navigation policy using **Deep Q-Learning**.
 
@@ -200,9 +236,7 @@ Training includes:
 - Prioritized Experience Replay (PER)
 - Periodic target synchronization
 
----
-
-## 4️⃣ Model Evaluation
+### 4️⃣ Model Evaluation
 
 After training, the learned policy is evaluated using multiple quantitative metrics.
 
@@ -217,9 +251,7 @@ Performance is measured through:
 
 The proposed Dueling Double DQN is benchmarked against the baseline models across all evaluation metrics.
 
----
-
-## 5️⃣ Visualization & Analysis
+### 5️⃣ Visualization & Analysis
 
 To better understand the learned policy, the framework generates several visual outputs.
 
@@ -236,7 +268,7 @@ These visualizations provide valuable insight into the agent's learning behavior
 
 ---
 
-# 📌 Core Components
+## 📌 Core Components
 
 | Component | Description |
 |-----------|-------------|
@@ -248,15 +280,15 @@ These visualizations provide valuable insight into the agent's learning behavior
 | **Evaluation Module** | Benchmarks trained models |
 | **Visualization Module** | Produces publication-quality figures and animations |
 
-# 🚀 Key Features
+---
+
+## 🚀 Key Features
 
 ### 🤖 Custom Reinforcement Learning Environment
 
 - Designed a custom **OpenAI Gym-compatible** 3D environment for autonomous UAV navigation.
 - Simulates realistic **Non-Terrestrial Network (NTN)** communication scenarios.
 - Modular implementation supporting training, evaluation, and benchmarking using the standard Gym API.
-
----
 
 ### 🛰️ Communication-Aware Navigation
 
@@ -267,8 +299,6 @@ Unlike traditional path planning, the UAV continuously balances multiple objecti
 - Avoid obstacles and restricted zones
 - Minimize unnecessary movement
 - Reach the destination safely
-
----
 
 ### 🧠 Deep Reinforcement Learning
 
@@ -281,8 +311,6 @@ Implemented multiple Deep RL architectures from scratch for comparison.
 | **Dueling Double DQN** | Proposed model with separate Value & Advantage estimation |
 | **Prioritized Experience Replay** | Samples important transitions more frequently |
 
----
-
 ### 📊 Benchmarking Framework
 
 The framework automatically compares different models using:
@@ -293,8 +321,6 @@ The framework automatically compares different models using:
 - Coverage Ratio
 - Training Stability
 - Learning Convergence
-
----
 
 ### 📈 Rich Visualizations
 
@@ -309,7 +335,7 @@ The repository includes multiple visualization utilities for analysing agent per
 
 ---
 
-# 🌍 Environment Design
+## 🌍 Environment Design
 
 The UAV operates inside a custom **20 × 20 × 5** three-dimensional grid representing an NTN-assisted urban environment.
 
@@ -329,7 +355,7 @@ The UAV must continuously make navigation decisions while maintaining reliable c
 
 ---
 
-# 🧩 State Representation
+## 🧩 State Representation
 
 Each state captures the information required by the agent to make navigation decisions.
 
@@ -346,7 +372,7 @@ These engineered features enable the agent to learn communication-aware navigati
 
 ---
 
-# 🎮 Action Space
+## 🎮 Action Space
 
 The UAV selects one action at every timestep from a discrete action space.
 
@@ -368,7 +394,7 @@ Before execution, every action is validated to ensure:
 
 ---
 
-# 🎯 Reward Function
+## 🎯 Reward Function
 
 The reward function encourages safe, efficient, and communication-aware navigation.
 
@@ -400,7 +426,7 @@ This multi-objective formulation allows the UAV to learn balanced navigation str
 
 ---
 
-# 🧪 Experimental Setup
+## 🧪 Experimental Setup
 
 | Parameter | Value |
 |-----------|------:|
@@ -416,7 +442,7 @@ This multi-objective formulation allows the UAV to learn balanced navigation str
 
 ---
 
-# 📂 Repository Structure
+## 📂 Repository Structure
 
 ```text
 UAV-PATH-OPTIMIZATION/
@@ -452,7 +478,10 @@ UAV-PATH-OPTIMIZATION/
 ├── README.md
 └── Published IEEE Paper.pdf
 ```
-# 📊 Experimental Results
+
+---
+
+## 📊 Experimental Results
 
 The proposed framework was evaluated over **3000 training episodes** and benchmarked against two widely used Deep Reinforcement Learning baselines:
 
@@ -467,9 +496,7 @@ The evaluation focuses on four key aspects:
 - Mission completion
 - Communication-aware decision making
 
----
-
-# 📈 Training Performance
+### 📈 Training Performance
 
 The figure below compares cumulative rewards obtained during training.
 
@@ -477,16 +504,14 @@ The figure below compares cumulative rewards obtained during training.
 <img src="data/rewards_comparison.png" width="850">
 </p>
 
-### Observations
+**Observations**
 
 - DQN exhibits unstable learning due to Q-value overestimation.
 - Double DQN improves convergence by separating action selection from evaluation.
 - **Dueling Double DQN consistently achieves the highest cumulative reward with significantly smoother convergence.**
 - Stable reward progression indicates better policy learning and reduced variance during training.
 
----
-
-# 🚧 Collision Analysis
+### 🚧 Collision Analysis
 
 Safe autonomous navigation is one of the primary objectives of this work.
 
@@ -494,16 +519,14 @@ Safe autonomous navigation is one of the primary objectives of this work.
 <img src="data/collisions_comparison.png" width="850">
 </p>
 
-### Observations
+**Observations**
 
 - DQN experiences frequent collisions throughout training.
 - Double DQN reduces collision frequency but still suffers from instability.
 - **The proposed Dueling Double DQN learns safer trajectories and maintains the lowest collision rate over long training periods.**
 - Better spatial awareness enables more reliable obstacle avoidance.
 
----
-
-# ✅ Mission Success Rate
+### ✅ Mission Success Rate
 
 Mission success measures the percentage of successful UAV missions completed without violating communication or navigation constraints.
 
@@ -511,7 +534,7 @@ Mission success measures the percentage of successful UAV missions completed wit
 <img src="data/success_comparison.png" width="850">
 </p>
 
-### Observations
+**Observations**
 
 - DQN converges slowly and remains highly unstable.
 - Double DQN reaches high success rates earlier than DQN.
@@ -519,7 +542,7 @@ Mission success measures the percentage of successful UAV missions completed wit
 
 ---
 
-# 📋 Quantitative Performance Comparison
+## 📋 Quantitative Performance Comparison
 
 | Metric | DQN | Double DQN | **Dueling Double DQN** |
 |---------|----:|-----------:|-----------------------:|
@@ -534,7 +557,7 @@ Mission success measures the percentage of successful UAV missions completed wit
 
 ---
 
-# 🧪 Ablation Study
+## 🧪 Ablation Study
 
 Beyond comparing reinforcement learning algorithms, an ablation study was conducted to understand the influence of reward weighting on agent behaviour.
 
@@ -545,44 +568,38 @@ Different values of **β** were evaluated.
 - β = 6
 - β = 10
 
----
-
-## Reward Analysis
+### Reward Analysis
 
 <p align="center">
 <img src="data/rewards_comparison_ablation.png" width="850">
 </p>
 
-### Findings
+**Findings**
 
 - β = 0 leads to poor exploration and low cumulative rewards.
 - β = 4 provides smooth convergence.
 - β = 6 achieves higher rewards while maintaining stable learning.
 - β = 10 reaches the highest rewards but introduces instability.
 
----
-
-## Collision Analysis
+### Collision Analysis
 
 <p align="center">
 <img src="data/collisions_comparison_ablation.png" width="850">
 </p>
 
-### Findings
+**Findings**
 
 - β = 4 demonstrates the safest navigation.
 - β = 6 provides a balanced trade-off.
 - β = 10 causes more aggressive movement, increasing collision frequency.
 
----
-
-## Success Rate Analysis
+### Success Rate Analysis
 
 <p align="center">
 <img src="data/success_comparison_ablation.png" width="850">
 </p>
 
-### Findings
+**Findings**
 
 - β = 4 consistently achieves the best balance between exploration and exploitation.
 - β = 6 performs competitively with slightly higher variance.
@@ -590,7 +607,7 @@ Different values of **β** were evaluated.
 
 ---
 
-# 📈 Key Experimental Insights
+## 📈 Key Experimental Insights
 
 The experimental evaluation demonstrates several important observations.
 
@@ -611,20 +628,88 @@ The experimental evaluation demonstrates several important observations.
 
 ---
 
-# 🎞️ Navigation Visualization
+## ⚙️ Installation
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📥 Clone the repository
+
+```bash
+git clone https://github.com/amanjaiswal-07/UAV-PATH-OPTIMIZATION.git
+
+cd UAV-PATH-OPTIMIZATION
+```
+
+</td>
+<td width="50%" valign="top">
+
+### 📦 Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Usage
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🌱 Generate synthetic environment
+
+```bash
+python scripts/generate_data.py
+```
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 Train the model
+
+```bash
+python main.py
+```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📊 Evaluate
+
+```bash
+python eval.py
+```
+
+</td>
+<td width="50%" valign="top">
+
+### 🎨 Visualize results
+
+```bash
+python visualize.py
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎬 Demonstration / Navigation Visualization
 
 The learned policy can be visualized through animated UAV trajectories.
 
 <p align="center">
-
-<img src="data/UAV2D view.gif" width="750">
-
-</p>
-
-<p align="center">
-
-<img src="data/UAV3D view.gif" width="750">
-
+<img src="data/path.gif" width="750">
 </p>
 
 The trained UAV learns to:
@@ -638,21 +723,19 @@ rather than simply minimizing travel distance.
 
 ---
 
-# 🏆 Publication
+## 🏆 Publication
 
 This work was accepted and presented at the
 
-## **IEEE National Conference on Communications (NCC 2026)**
+### **IEEE National Conference on Communications (NCC 2026)**
 
 hosted at **IIT Hyderabad**.
 
 The publication validates the proposed reinforcement learning framework through peer review and experimental evaluation.
 
-### Paper
+**Paper:** *DDQN-Enabled UAV Path Planning in Non-Terrestrial Networks Under ICAS Constraints*
 
-**DDQN-Enabled UAV Path Planning in Non-Terrestrial Networks Under ICAS Constraints**
-
-### Major Contributions
+**Major Contributions**
 
 - Proposed a communication-aware Dueling Double DQN framework.
 - Developed a custom 3D NTN simulation environment.
@@ -662,22 +745,89 @@ The publication validates the proposed reinforcement learning framework through 
 
 ---
 
-# 📜 Citation
+## 📜 Citation
 
 If you use this work in your research, please cite:
 
 ```bibtex
 @INPROCEEDINGS{11479152,
-
-title={DDQN-Enabled UAV Path Planning in Non-Terrestrial Networks Under ICAS Constraints},
-
-author={Aman Jaiswal and Anirudh Agarwal and Nishant Gupta and Deepak Mishra and Vaibhav Kumar Gupta},
-
-booktitle={2026 National Conference on Communications (NCC)},
-
-year={2026},
-
-doi={10.1109/NCC68160.2026.11479152}
-
+  title={DDQN-Enabled UAV Path Planning in Non-Terrestrial Networks Under ICAS Constraints},
+  author={Aman Jaiswal and Anirudh Agarwal and Nishant Gupta and Deepak Mishra and Vaibhav Kumar Gupta},
+  booktitle={2026 National Conference on Communications (NCC)},
+  year={2026},
+  doi={10.1109/NCC68160.2026.11479152}
 }
 ```
+
+---
+
+## 💼 Skills Demonstrated
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🤖 Machine Learning
+
+- Deep Reinforcement Learning
+- DQN
+- Double DQN
+- Dueling Double DQN
+- Prioritized Experience Replay
+- Hyperparameter Tuning
+
+</td>
+<td width="33%" valign="top">
+
+### 🛠️ Software Engineering
+
+- Object-Oriented Programming
+- Modular Architecture
+- OpenAI Gym Environment
+- PyTorch Model Development
+- Evaluation Pipelines
+
+</td>
+<td width="33%" valign="top">
+
+### 📊 Data Science
+
+- Synthetic Data Generation
+- Feature Engineering
+- Experiment Tracking
+- Performance Benchmarking
+- Visualization
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Future Work
+
+Several extensions can further improve this framework.
+
+- Multi-UAV cooperative navigation
+- Dynamic user mobility
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+### Aman Jaiswal
+
+Electronics & Communication Engineering
+The LNM Institute of Information Technology, Jaipur
+
+📧 **Email:** [aman7250590441@gmail.com](mailto:aman7250590441@gmail.com)
+
+🔗 **LinkedIn:** [linkedin.com/in/aman-jaiswal-aa31b51b5](https://linkedin.com/in/aman-jaiswal-aa31b51b5)
+
+💻 **GitHub:** [github.com/amanjaiswal-07](https://github.com/amanjaiswal-07)
+
+📄 **IEEE Publication:** [ieeexplore.ieee.org/document/11479152](https://ieeexplore.ieee.org/document/11479152)
+
+</div>
