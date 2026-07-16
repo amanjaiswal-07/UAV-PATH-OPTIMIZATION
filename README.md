@@ -437,7 +437,6 @@ This multi-objective formulation allows the UAV to learn balanced navigation str
 | Discount Factor (γ) | 0.99 |
 | Batch Size | 64 |
 | Replay Buffer | 100,000 |
-| Optimizer | Adam |
 | Framework | PyTorch |
 
 ---
