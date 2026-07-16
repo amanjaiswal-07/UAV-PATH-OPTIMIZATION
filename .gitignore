@@ -1,8 +1,28 @@
+# __pycache__/
+# *.pyc
+# *.npy
+# *.pth
+# *.png
+# *.gif
+# training_metrics.png
+# training_metrics_detailed.png
 __pycache__/
 *.pyc
+
+# Ignore everywhere
 *.npy
-*.pth
-*.png
+*.csv
 *.gif
+*.png
+*.pth
+
 training_metrics.png
 training_metrics_detailed.png
+
+# Unignore everything inside data
+!data/
+!data/**/*.npy
+!data/**/*.csv
+!data/**/*.gif
+!data/**/*.png
+!data/**
