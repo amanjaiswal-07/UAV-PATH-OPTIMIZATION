@@ -568,6 +568,30 @@ Different values of **β** were evaluated.
 - β = 6
 - β = 10
 
+## 🧪 Ablation Study
+
+Beyond comparing reinforcement learning algorithms, an ablation study was conducted to understand the influence of reward weighting on agent behaviour.
+
+Different values of **β** were evaluated.
+
+- β = 0
+- β = 4
+- β = 6
+- β = 10
+
+### 📋 Quantitative Comparison (3000 Episodes)
+
+| Metric | β=0 | β=4 | β=6 | β=10 |
+|--------|----:|----:|----:|-----:|
+| Success Rate (%) | 0.0 | 75.0 | 60.0 | **80.0** |
+| Avg Reward | -109.6 | 297.2 | 216.6 | **521.9** |
+| Avg Steps | **130.8** | 52.3 | 80.2 | 66.3 |
+| Avg Collisions | **2.8** | 9.3 | 13.2 | 11.7 |
+| Coverage Ratio | 0.057 | 0.079 | 0.092 | **0.095** |
+| Collisions / Step | **0.021** | 0.179 | 0.164 | 0.176 |
+
+> **Takeaways:** Higher β values encourage exploration, improving both coverage and rewards. However, excessive weighting (β = 10) increases collision frequency and instability. β = 4 achieves a strong trade-off between success rate, efficiency, and collision avoidance. β = 0 yields safe but overly conservative behavior, limiting exploration and success. **(Best values in bold.)**
+
 ### Reward Analysis
 
 <p align="center">
