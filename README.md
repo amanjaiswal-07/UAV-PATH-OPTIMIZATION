@@ -567,17 +567,6 @@ Different values of **β** were evaluated.
 - β = 6
 - β = 10
 
-## 🧪 Ablation Study
-
-Beyond comparing reinforcement learning algorithms, an ablation study was conducted to understand the influence of reward weighting on agent behaviour.
-
-Different values of **β** were evaluated.
-
-- β = 0
-- β = 4
-- β = 6
-- β = 10
-
 ### 📋 Quantitative Comparison (3000 Episodes)
 
 | Metric | β=0 | β=4 | β=6 | β=10 |
