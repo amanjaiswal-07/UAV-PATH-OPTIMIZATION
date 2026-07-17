@@ -112,7 +112,7 @@ The research was **accepted and presented at IEEE National Conference on Communi
 - [Citation](#-citation)
 - [Skills Demonstrated](#-skills-demonstrated)
 - [Future Work](#-future-work)
-- [Author](#-author)
+- [Author](#author)
 
 ---
 
@@ -824,8 +824,8 @@ Several extensions can further improve this framework.
 - Dynamic user mobility
 
 ---
-
-## 👨‍💻 Author
+<a id="author"></a>
+## Author
 
 <div align="center">
 
